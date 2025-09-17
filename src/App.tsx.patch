@@ -1,0 +1,30 @@
+window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+=======
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // New handler for Download CV button
+  const downloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/Gagoope_ClaranceMerafhe_CV.pdf';
+    link.download = 'Gagoope_ClaranceMerafhe_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+```
+
+```
+<<<<<<< SEARCH
+              <button className="group bg-gray-800/50 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 flex items-center space-x-2">
+                <Download size={20} />
+                <span>Download CV</span>
+              </button>
+=======
+              <button onClick={downloadCV} className="group bg-gray-800/50 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 flex items-center space-x-2">
+                <Download size={20} />
+                <span>Download CV</span>
+              </button>
